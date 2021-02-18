@@ -1,0 +1,37 @@
+<img class="picture" src="/assets/img/" />
+
+<h1>Eat Da burgers!</h1>
+
+<div class="all-list">
+    
+    <div>
+        <h2>On Menu:</h2>
+        <div class="new-add">
+            {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+            {{/each}}
+        </div>   
+    </div>
+
+    <div>
+        <h2>Devoured List:</h2>
+        <div class="devoured">
+            {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/devoured-block }}
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<form class="submit-form">
+    <div class="submit-area">
+        <p for="bg">Enter a burger you want to eat:</p>
+        <input type="text" id="bg" name="name">
+    </div>
+
+    <button id="submit-button" type="submit">Submit</button>
+</form>
