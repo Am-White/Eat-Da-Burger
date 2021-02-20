@@ -11,7 +11,7 @@ INSERT INTO burgers (burger_name, devoured)
 VALUES ('big mac', false);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES ('buttermilk fried chicken burger', false);
+VALUES ('fried chicken burger', false);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES ('double decker beef burger', false);
+VALUES ('double beef burger', false);

@@ -2,6 +2,7 @@ const express = require ("express");
 const mysql = require ("mysql");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers/burgers_controller.js");
+require('dotenv').config()
 
 const PORT = process.env.PORT || 8080;
 
