@@ -1,11 +1,13 @@
-<img class="picture" src="" />
+<div class="image"> 
+    <iframe class="gif" src="https://giphy.com/embed/ToMjGplHPoYqSg7oACc" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bleedgfx-burger-ToMjGplHPoYqSg7oACc"></a></p>
+</div>
 
 <h1>Eat Da burgers!</h1>
 
-<div class="all-list">
+<div class="all-list grid-container">
     
-    <div>
-        <h2>On Menu:</h2>
+    <div id="onMenu" class="grid-item">
+        <h2>Menu:</h2>
         <div class="new-add">
             {{#each burgers}}
                 {{#unless devoured}}
@@ -15,8 +17,8 @@
         </div>   
     </div>
 
-    <div>
-        <h2>Devoured List:</h2>
+    <div id="devouredList" class="grid-item">
+        <h2>Already Devoured:</h2>
         <div class="devoured">
             {{#each burgers}}
                 {{#if devoured}}
@@ -29,7 +31,7 @@
 
 <form class="submit-form">
     <div class="submit-area">
-        <p for="bg">Enter a burger you want to eat:</p>
+        <p for="bg" class="submit">Enter a burger you want to eat:</p>
         <input type="text" id="bg" name="name">
     </div>
 

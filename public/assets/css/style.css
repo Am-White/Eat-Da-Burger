@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(240, 126, 106);
+    margin: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.gif {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.image {
+    text-align: center;
+}
+
+.all-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+#onMenu {
+    border: crimson 5px solid;
+    padding: 10px;
+}
+
+#devouredList {
+    border: crimson 5px solid;
+    padding: 10px;
+}
+
+.submit-form {
+    text-align: center;
+}
+
+.submit {
+    font-size: 20px;
+    font-weight: 800;
+}
