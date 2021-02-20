@@ -1,10 +1,6 @@
 
 // Dependencies
 var mysql = require("mysql");
-
-require('dotenv').config()
-
-const util = require("util");
 var connection;
 
 // Set up MySQL connection

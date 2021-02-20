@@ -1,30 +1,33 @@
-const orm = require('../config/orm')
+const orm = require('../config/orm.js')
 
 //Database functions
-const burger = {
+const burgers = {
  
-  selectAll: cb => {
-    orm.selectAll('burgers', result => {
-      cb(result);
-    });
-  },
-  addOneBurger: (column, value, cb) => {
-    orm.insertOne('burgers', column, value, function (result) {
-      cb(result);
-    });
-  },
-  updateOne: function (value, condition, cb) {
-    orm.updateOne("burgers", value, condition, function (res) {
+  selectAll: function(cb) {
+    orm.selectAll("burgers", function(res) {
       cb(res);
     });
   },
+
+  insertOne: function(cols, vals, cb) {
+    orm.insertOne("burgers", cols, vals, function (res) {
+      cb(res);
+    });
+  },
+
+  updateOne: function (objColVals, condition, cb) {
+    orm.updateOne("burgers", objColVals, condition, function (res) {
+      cb(res);
+    });
+  },
+
   deleteOne: function (condition, cb) {
-    orm.deleteOne("burgers", condition, function (res) {
+    orm.deleteOne("burgers", condition, function(res) {
       cb(res);
     });
   }
 
-};
+}
 
 //Export the database functions for the controller
-module.exports = burger;
+module.exports = burgers;
